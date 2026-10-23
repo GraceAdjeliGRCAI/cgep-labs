@@ -1,0 +1,12 @@
+labels:
+  compliance_scope: cge-p-lab
+  environment: dev
+  managed_by: terraform
+  project: cgep-lab
+public_access_prevention: enforced
+retention_policy:
+  effectiveTime: '2026-10-23T10:17:10.385000+00:00'
+  retentionPeriod: '2592000'
+uniform_bucket_level_access: true
+projects/gcp-project-504012/locations/us-central1/keyRings/dev-data-gma-ring/cryptoKeys/dev-data-gma-key	True
+7776000s	2027-01-21T10:17:04.165425Z
