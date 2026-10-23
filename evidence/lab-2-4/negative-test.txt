@@ -1,0 +1,63 @@
+module.data_bucket.data.google_storage_project_service_account.gcs: Reading...
+module.data_bucket.data.google_storage_project_service_account.gcs: Read complete after 0s [id=service-373160403150@gs-project-accounts.iam.gserviceaccount.com]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform planned the following actions, but then encountered a problem:
+
+  # module.data_bucket.google_kms_crypto_key.key will be created
+  + resource "google_kms_crypto_key" "key" {
+      + crypto_key_backend         = (known after apply)
+      + destroy_scheduled_duration = (known after apply)
+      + effective_labels           = (known after apply)
+      + id                         = (known after apply)
+      + import_only                = (known after apply)
+      + key_ring                   = (known after apply)
+      + name                       = "should-never-exist-key"
+      + primary                    = (known after apply)
+      + purpose                    = "ENCRYPT_DECRYPT"
+      + rotation_period            = "7776000s"
+      + terraform_labels           = (known after apply)
+
+      + version_template {
+          + algorithm        = "GOOGLE_SYMMETRIC_ENCRYPTION"
+          + protection_level = "SOFTWARE"
+        }
+    }
+
+  # module.data_bucket.google_kms_crypto_key_iam_member.gcs_encrypter will be created
+  + resource "google_kms_crypto_key_iam_member" "gcs_encrypter" {
+      + crypto_key_id = (known after apply)
+      + etag          = (known after apply)
+      + id            = (known after apply)
+      + member        = "serviceAccount:service-373160403150@gs-project-accounts.iam.gserviceaccount.com"
+      + role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
+    }
+
+  # module.data_bucket.google_kms_key_ring.ring will be created
+  + resource "google_kms_key_ring" "ring" {
+      + id       = (known after apply)
+      + location = "us-central1"
+      + name     = "should-never-exist-ring"
+      + project  = "gcp-project-504012"
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + kms_key_id = (known after apply)
+
+Error: Invalid value for variable
+
+  on main.tf line 20, in module "data_bucket":
+  20:   retention_days     = 30
+    ├────────────────
+    │ var.environment is "prod"
+    │ var.retention_days is 30
+
+retention_days must be >= 365 when environment == "prod".
+
+This was checked by the validation rule at
+../../modules/compliant-gcs-bucket/variables.tf:46,3-13.
