@@ -1,0 +1,10 @@
+module.data_bucket.google_storage_bucket.bucket: Destroying... [id=cgep-lab-dev-dev-data-gma-2]
+module.data_bucket.google_storage_bucket.bucket: Destruction complete after 1s
+module.data_bucket.google_kms_crypto_key_iam_member.gcs_encrypter: Destroying... [id=projects/gcp-project-504012/locations/us-central1/keyRings/dev-data-gma-2-ring/cryptoKeys/dev-data-gma-2-key/roles/cloudkms.cryptoKeyEncrypterDecrypter/serviceAccount:service-373160403150@gs-project-accounts.iam.gserviceaccount.com]
+module.data_bucket.google_kms_crypto_key_iam_member.gcs_encrypter: Destruction complete after 5s
+module.data_bucket.google_kms_crypto_key.key: Destroying... [id=projects/gcp-project-504012/locations/us-central1/keyRings/dev-data-gma-2-ring/cryptoKeys/dev-data-gma-2-key]
+module.data_bucket.google_kms_crypto_key.key: Destruction complete after 0s
+module.data_bucket.google_kms_key_ring.ring: Destroying... [id=projects/gcp-project-504012/locations/us-central1/keyRings/dev-data-gma-2-ring]
+module.data_bucket.google_kms_key_ring.ring: Destruction complete after 0s
+
+Apply complete! Resources: 0 added, 0 changed, 4 destroyed.

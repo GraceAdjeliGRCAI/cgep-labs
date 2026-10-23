@@ -5,8 +5,8 @@ labels:
   project: cgep-lab
 public_access_prevention: enforced
 retention_policy:
-  effectiveTime: '2026-10-23T10:17:10.385000+00:00'
+  effectiveTime: '2026-10-23T11:28:20.629000+00:00'
   retentionPeriod: '2592000'
 uniform_bucket_level_access: true
-projects/gcp-project-504012/locations/us-central1/keyRings/dev-data-gma-ring/cryptoKeys/dev-data-gma-key	True
-7776000s	2027-01-21T10:17:04.165425Z
+projects/gcp-project-504012/locations/us-central1/keyRings/dev-data-gma-2-ring/cryptoKeys/dev-data-gma-2-key	True
+7776000s	2027-01-21T11:28:14.399711Z
